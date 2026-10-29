@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joue à un quiz informatique sur QuizMaster.">
+  <title>Quiz interactif | QuizMaster</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/quiz.css">
+ <script src="../js/questions.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+</head>
+<body class="quiz-page">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="../index.html" aria-label="QuizMaster, accueil">Quiz<span class="logo-accent">Master</span></a>
+      <nav class="main-nav" aria-label="Navigation principale"><a href="../index.html#accueil">Accueil</a><a href="../index.html#categories">Catégories</a></nav>
+      <a class="button button-secondary header-button" href="../index.html#categories">Quitter le quiz</a>
+    </div>
+  </header>
+  <main class="quiz-main container">
+    <a class="back-link" href="../index.html#categories">← Retour aux catégories</a>
+    <section class="quiz-screen category-screen" id="category-screen">
+      <div class="quiz-intro">
+        <p class="eyebrow">À TOI DE JOUER</p><h1>Choisis ton <span class="text-gradient">quiz</span></h1>
+        <p>Sélectionne un domaine pour commencer le défi.</p>
+      </div>
+      <div class="quiz-category-grid">
+        <button class="quiz-category-card" type="button" data-category="programming"><span class="quiz-category-icon">&lt;/&gt;</span><strong>Programmation</strong><span>10 questions · Niveau débutant</span><span class="category-card-arrow">→</span></button>
+        <button class="quiz-category-card" type="button" data-category="networks"><span class="quiz-category-icon">⌘</span><strong>Réseaux informatiques</strong><span>10 questions · Niveau débutant</span><span class="category-card-arrow">→</span></button>
+        <button class="quiz-category-card" type="button" data-category="databases"><span class="quiz-category-icon">▤</span><strong>Bases de données</strong><span>10 questions · Niveau débutant</span><span class="category-card-arrow">→</span></button>
+      </div>
+    </section>
+
+    <section class="quiz-screen game-screen" id="game-screen" hidden>
+      <div class="game-heading"><div><p class="eyebrow">QUIZ EN COURS</p><h1 id="quiz-title">Programmation</h1></div><div class="timer" id="timer" role="timer" aria-live="off"><span aria-hidden="true">◷</span> <span id="timer-value">15</span> s</div></div>
+      <div class="progress-info"><span id="question-counter">Question 1 sur 10</span><span id="score-live">Score : 0</span></div>
+      <div class="progress-track" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1" id="progress-track"><span id="progress-fill"></span></div>
+      <article class="question-card">
+        <p class="question-label">QUESTION</p><h2 id="question-text">La question apparaîtra ici.</h2>
+        <div class="answers-list" id="answers-list" role="group" aria-label="Choisissez une réponse"></div>
+        <p class="answer-status" id="answer-status" aria-live="polite"></p>
+        <div class="question-footer"><span id="question-hint">Choisis une seule réponse.</span><button class="button button-primary" id="next-button" type="button" disabled>Question suivante <span aria-hidden="true">→</span></button></div>
+      </article>
+      <p class="quiz-note">Astuce : lis bien chaque proposition avant de répondre.</p>
+    </section>
+
+    <section class="quiz-screen result-screen" id="result-screen" hidden>
+      <div class="result-hero"><div class="result-trophy" aria-hidden="true">🏆</div><p class="eyebrow">QUIZ TERMINÉ</p><h1 id="result-title">Bravo !</h1><p id="result-message">Voici ton résultat.</p>
+        <div class="result-summary"><div><strong id="final-score">0/10</strong><span>Score</span></div><div><strong id="final-percent">0%</strong><span>Réussite</span></div><div><strong id="final-time">0 s</strong><span>Temps écoulé</span></div></div>
+        <div class="result-actions"><button class="button button-primary" id="retry-button" type="button">Recommencer ↻</button><button class="button button-secondary" id="change-category-button" type="button">Autre catégorie</button></div>
+      </div>
+      <div class="corrections-section"><div class="section-heading compact-heading"><p class="eyebrow">POUR PROGRESSER</p><h2>Correction des réponses</h2><p>Retrouve la bonne réponse pour chaque question.</p></div><div class="corrections-list" id="corrections-list"></div></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="../index.html">Quiz<span class="logo-accent">Master</span></a>
+      <p>© 2026 QuizMaster</p>
+      <a href="../index.html#categories">Choisir un autre quiz</a>
+    </div>
+  </footer>
+</body>
+</html>

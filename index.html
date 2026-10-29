@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuizMaster : teste tes connaissances en programmation, réseaux informatiques et bases de données.">
+  <title>QuizMaster | Apprends en jouant</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html" aria-label="QuizMaster, accueil">Quiz<span class="logo-accent">Master</span></a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#categories">Catégories</a>
+        <a href="#fonctionnement">Comment ça marche</a>
+      </nav>
+      <a class="button button-primary header-button" href="#categories">Commencer</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero section" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> APPRENDS • PRATIQUE • PROGRESSE</p>
+          <h1>Teste tes connaissances.<br><span class="text-gradient">Dépasse tes limites.</span></h1>
+          <p class="hero-description">Progresse en informatique grâce à des quiz courts, interactifs et conçus pour t'aider à apprendre à ton rythme.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#categories">Découvrir les quiz <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#fonctionnement">Comment ça marche ?</a>
+          </div>
+          <div class="hero-stats" aria-label="Informations sur les quiz">
+            <div><strong>3</strong><span>Catégories</span></div>
+            <div><strong>30</strong><span>Questions</span></div>
+            <div><strong>100%</strong><span>Interactif</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration d'un quiz informatique">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="quiz-preview-card">
+            <div class="preview-top"><span class="preview-icon">✦</span><span class="preview-label">QUESTION DU JOUR</span><span class="preview-dots">•••</span></div>
+            <p class="preview-question">Quel langage s'exécute dans le navigateur web ?</p>
+            <div class="preview-answer correct"><span>A</span> JavaScript <b>✓</b></div>
+            <div class="preview-answer"><span>B</span> SQL</div>
+            <div class="preview-answer"><span>C</span> C</div>
+            <div class="preview-progress"><span></span></div>
+            <div class="preview-footer"><span>Question 3 sur 10</span><span>⏱ 00:12</span></div>
+          </div>
+          <div class="floating-badge badge-top">⚡ Apprendre en jouant</div>
+          <div class="floating-badge badge-bottom">✓ Progression sauvegardée localement*</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories-section" id="categories">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CHOISIS TON DÉFI</p>
+          <h2>Explore les catégories</h2>
+          <p>Choisis un domaine et mesure tes connaissances en quelques minutes.</p>
+        </div>
+        <div class="category-grid">
+          <article class="category-card">
+            <div class="category-icon icon-programming" aria-hidden="true">&lt;/&gt;</div>
+            <span class="category-tag">CODE</span>
+            <h3>Programmation</h3>
+            <p>Variables, algorithmes, JavaScript et bonnes pratiques de développement.</p>
+            <div class="category-meta"><span>10 questions</span><span>⏱ 15 s / question</span></div>
+            <a href="pages/quiz.html?category=programming" class="category-link">Commencer <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="category-card">
+            <div class="category-icon icon-networks" aria-hidden="true">⌘</div>
+            <span class="category-tag">CONNECTIVITÉ</span>
+            <h3>Réseaux informatiques</h3>
+            <p>Découvre les protocoles, les adresses IP et les bases des réseaux.</p>
+            <div class="category-meta"><span>10 questions</span><span>⏱ 15 s / question</span></div>
+            <a href="pages/quiz.html?category=networks" class="category-link">Commencer <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="category-card">
+            <div class="category-icon icon-databases" aria-hidden="true">▤</div>
+            <span class="category-tag">DONNÉES</span>
+            <h3>Bases de données</h3>
+            <p>Tables, requêtes SQL, clés et principes de gestion des données.</p>
+            <div class="category-meta"><span>10 questions</span><span>⏱ 15 s / question</span></div>
+            <a href="pages/quiz.html?category=databases" class="category-link">Commencer <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="fonctionnement">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SIMPLE ET EFFICACE</p>
+          <h2>Comment ça marche ?</h2>
+          <p>Trois étapes pour transformer tes connaissances en réflexes.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number">01</span><div class="step-icon">🎯</div><h3>Choisis un thème</h3><p>Sélectionne la catégorie que tu veux réviser.</p></article>
+          <article class="step-card"><span class="step-number">02</span><div class="step-icon">⏳</div><h3>Réponds rapidement</h3><p>Lis chaque question et choisis la meilleure réponse avant la fin du temps.</p></article>
+          <article class="step-card"><span class="step-number">03</span><div class="step-icon">🏆</div><h3>Consulte ton résultat</h3><p>Découvre ton score et les corrections pour progresser.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section">
+      <div class="container cta-inner"><div><p class="eyebrow">PRÊT À COMMENCER ?</p><h2>Ton prochain défi t'attend.</h2><p>Choisis une catégorie et lance ton premier quiz.</p></div><a class="button button-light" href="#categories">Je relève le défi <span aria-hidden="true">→</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="logo" href="index.html">Quiz<span class="logo-accent">Master</span></a><p>© 2026 QuizMaster — Apprendre devient un jeu.</p><a href="#accueil">Retour en haut ↑</a></div>
+  </footer>
+</body>
+</html>
