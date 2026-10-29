@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/quiz.css">
- <script src="../js/questions.js" defer></script>
-<script src="../js/quiz.js" defer></script>
+ <script src="../data/questions.js" defer></script>
+<script type="module" src="../js/quiz.js"></script>
 </head>
 <body class="quiz-page">
   <header class="site-header">
@@ -37,7 +37,7 @@
     <section class="quiz-screen game-screen" id="game-screen" hidden>
       <div class="game-heading"><div><p class="eyebrow">QUIZ EN COURS</p><h1 id="quiz-title">Programmation</h1></div><div class="timer" id="timer" role="timer" aria-live="off"><span aria-hidden="true">◷</span> <span id="timer-value">15</span> s</div></div>
       <div class="progress-info"><span id="question-counter">Question 1 sur 10</span><span id="score-live">Score : 0</span></div>
-      <div class="progress-track" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1" id="progress-track"><span id="progress-fill"></span></div>
+      <div id="progress-track" class="question-progress" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1" ></div>
       <article class="question-card">
         <p class="question-label">QUESTION</p><h2 id="question-text">La question apparaîtra ici.</h2>
         <div class="answers-list" id="answers-list" role="group" aria-label="Choisissez une réponse"></div>

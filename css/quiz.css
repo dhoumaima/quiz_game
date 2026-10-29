@@ -63,7 +63,122 @@
 .correction-card p { margin: 5px 0 0; font-size: .85rem; }
 .correction-card .correct-answer { color: var(--color-success); font-weight: 700; }
 .correction-card .user-answer { color: var(--color-danger); }
+.answer-option.is-selected { color: var(--color-primary-dark); border: 2px solid var(--color-primary); background: var(--color-primary-light); box-shadow: 0 0 0 2px rgba(115, 87, 232, 0.12);}
+.answer-option.is-selected .answer-letter {
+  color: #fff;
+  background: var(--color-primary);
+}
+.answer-option:disabled {cursor: not-allowed;opacity: 0.9;}
+.question-progress {display: grid;grid-template-columns: repeat(10, minmax(0, 1fr));gap: 8px;width: 100%;margin: 20px 0;}
+.progress-box {height: 12px;border-radius: 4px;background-color: #e5e7eb;transition: background-color 0.25s ease;}
+.progress-box.is-current {background-color: #7357e8;}
+.progress-box.is-correct {background-color: #16a34a;}
+.progress-box.is-wrong {background-color: #dc2626;}
 
+.best-score-highlight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 440px;
+  margin: 20px auto 0;
+  padding: 18px 22px;
+  text-align: left;
+  border: 1px solid #ded5ff;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f8f6ff, #eee9ff);
+  box-shadow: 0 8px 24px rgba(115, 87, 232, 0.08);
+}
+
+.best-score-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 15px;
+  background: #fff;
+  font-size: 1.7rem;
+  box-shadow: 0 3px 10px rgba(70, 50, 130, 0.08);
+}
+
+.best-score-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.best-score-label {
+  color: #7357e8;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.best-score-content strong {
+  color: #382477;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.best-score-content strong span {
+  color: #756b91;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.best-score-percent {
+  color: #756b91;
+  font-size: 0.82rem;
+}
+
+/* Transition horizontale entre les questions */
+.question-card {
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.question-card.slide-out {
+  transform: translateX(-40px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.question-card.slide-in {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .question-card {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-score-highlight {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .best-score-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+  }
+
+  .best-score-content strong {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-progress {
+    gap: 4px;
+  }
+
+  .progress-box {
+    height: 9px;
+  }
+}
 @media (max-width: 760px) {
   .quiz-category-grid { grid-template-columns: 1fr; }
   .quiz-category-card { min-height: 150px; }
